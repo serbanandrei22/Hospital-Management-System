@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Appointment {
+public class Appointment implements HasId {
     private String id;
     private String departmentId;
     private String patientId;

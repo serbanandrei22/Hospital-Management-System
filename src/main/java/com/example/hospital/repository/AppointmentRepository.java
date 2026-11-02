@@ -7,29 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class AppointmentRepository {
-    private final List<Appointment> storage = new ArrayList<>();
-
-    public Appointment save(Appointment appointment) {
-        delete(appointment.getId());
-        storage.add(appointment);
-        return appointment;
-    }
-
-    public Appointment findById(String id) {
-        for (Appointment appointment : storage) {
-            if (appointment.getId().equals(id)) {
-                return appointment;
+public class AppointmentRepository extends InMemoryRepository<Appointment>{
+    public List<Appointment> findByPatientId(String patientId){
+        List<Appointment> result = new ArrayList<>();
+        for(Appointment appointment: this.objects){
+            if(appointment.getPatientId() != null && appointment.getPatientId().equals(patientId)){
+                result.add(appointment);
             }
         }
-        return null;
-    }
-
-    public List<Appointment> findAll() {
-        return new ArrayList<>(storage);
-    }
-
-    public void delete(String id) {
-        storage.removeIf(appointment -> appointment.getId().equals(id));
+        return result;
     }
 }
