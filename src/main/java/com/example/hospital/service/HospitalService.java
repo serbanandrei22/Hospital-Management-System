@@ -4,6 +4,7 @@ import com.example.hospital.repository.HospitalRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+@Service
 public class HospitalService {
     private final HospitalRepository hospitalRepository;
     public HospitalService(HospitalRepository hospitalRepository){
