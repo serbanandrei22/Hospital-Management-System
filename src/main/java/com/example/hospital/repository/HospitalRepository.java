@@ -1,4 +1,4 @@
 package com.example.hospital.repository;
 
-public class hospitalrepo {
+public class HospitalRepository {
 }
