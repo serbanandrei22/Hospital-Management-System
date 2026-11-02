@@ -25,5 +25,28 @@ public class Appointment {
         this.medicalStaff = new ArrayList<>();
     }
 
-
+    public String getId() {
+        return id;}
+    public void setId(String id) {
+        this.id = id;}
+    public String getDepartmentId() {
+        return departmentId;}
+    public void setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;}
+    public String getPatientId() {
+        return patientId;}
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;}
+    public LocalDate getAdmissionDate() {
+        return admissionDate;}
+    public void setAdmissionDate(LocalDate admissionDate) {
+        this.admissionDate = admissionDate;}
+    public String getStatus() {
+        return status;}
+    public void setStatus(String status) {
+        this.status = status;}
+    public List<String> getMedicalStaff() {
+        return medicalStaff;}
+    public void setMedicalStaff(List<String> medicalStaff) {
+        this.medicalStaff = medicalStaff;}
 }
