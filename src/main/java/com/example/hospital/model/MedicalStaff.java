@@ -2,7 +2,7 @@ package com.example.hospital.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class MedicalStaff {
+public abstract class MedicalStaff implements HasId {
     private String id;
     private String name;
     private List<String> appointments;

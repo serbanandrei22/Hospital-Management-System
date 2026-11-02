@@ -1,14 +1,13 @@
 package com.example.hospital.repository;
 
 import com.example.hospital.model.HasId;
-import tools.jackson.core.ObjectReadContext;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class InMemoryRepo<T extends HasId> implements BaseRepo<T> {
+public abstract class InMemoryRepository<T extends HasId> implements BaseRepository<T> {
     protected List<T> objects;
-    public InMemoryRepo(){
+    public InMemoryRepository(){
         this.objects=new ArrayList<>();
     }
     @Override
