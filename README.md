@@ -1,34 +1,34 @@
 # Hospital Management System
 
-Spring Boot application for managing hospital operations, departments, medical staff, patients, and appointments.
+Spring Boot application for managing a hospital (departments, doctors, nurses, patients, and appointments).
 
 ## Technologies
-- Java 17 / Java 21
+- Java 27
 - Spring Boot
 - Maven
 
 ## Project Structure
-The application follows a standard 4-layer architecture:
-- `model`: Domain entities (`Hospital`, `Department`, `Room`, `Patient`, `Appointment`, `Doctor`, `Nurse`, `MedicalStaffAppointment`)
-- `repository`: In-memory persistence layer using `List`
-- `service`: Business logic layer separated per entity
-- `controller`: Web layer handling HTTP requests
+The application is split into 4 packages:
+- `model`: data classes (Hospital, Department, Room, Patient, Appointment, Doctor, Nurse, MedicalStaffAppointment)
+- `repository`: in-memory data storage using lists (`List`)
+- `service`: application logic for each entity
+- `controller`: web endpoints
 
-## Architecture Decisions
+## OOP and Design Principles Applied
+- **Single Responsibility Principle (SRP):** Each layer and class has one clear task. Repositories only store data, services handle business logic and validation, and controllers handle web endpoints.
+- **Don't Repeat Yourself (DRY):** We avoided duplicate CRUD code by writing the logic once in the generic `InMemoryRepository<T extends HasId>`.
+- **Dependency Inversion Principle (DIP):** Higher layers depend on abstractions (interfaces like `BaseRepository`) rather than concrete in-memory collections, making it easy to swap storage later.
 
-### 1. In-Memory Repository with Generic Base Class
-- We defined a `HasId` interface and a generic `BaseRepository<T extends HasId>` interface containing standard CRUD operations (`save`, `findAll`, `findById`, `delete`).
-- An abstract class `InMemoryRepository<T extends HasId>` implements this interface using a `List<T>` to hold the data in memory.
-- Every specific repository (e.g. `PatientRepository`, `DoctorRepository`, `RoomRepository`) extends `InMemoryRepository`, keeping the code clean and avoiding duplicate CRUD implementations (DRY).
-- `MedicalStaff` is abstract, while concrete repositories exist for `Doctor` and `Nurse`.
+## Architecture and Decisions
+- **Generic Repository:** We created a `BaseRepository` interface and an `InMemoryRepository` abstract class using a list. All entities implement `HasId` so we do not have to rewrite basic CRUD methods (save, findById, delete) in every repository.
+- **Service per Entity:** Each main model has its own service (e.g., `PatientService`, `DoctorService`) so that each class has a single responsibility.
+- **Added Model Fields:**
+  - `Patient`: added `email` and `phoneNumber`
+  - `Room`: added `floorNumber`
+  - `Hospital`: added `emergencyHotline`
+- For `Appointment`, we used `LocalDate` for dates instead of plain Strings.
 
-### 2. Service Layer (Single Responsibility)
-- We split the business logic into separate services for each main entity (`HospitalService`, `DepartmentService`, `RoomService`, `PatientService`, `DoctorService`, `NurseService`, `AppointmentService`).
-- Each service is responsible strictly for its own domain model.
-- Controllers never access repositories directly; they only interact with services. Dependencies are injected via constructor.
-
-### 3. Model Extensions
-As specified in the project requirements, we extended 3 models with additional fields:
-- `Patient`: added `email` (String) and `phoneNumber` (String)
-- `Room`: added `floorNumber` (int)
-- `Hospital`: added `emergencyHotline` (String)
+## How to Run
+1. Open the project in IntelliJ IDEA.
+2. Run `HospitalApplication.java`.
+3. Check in your browser: `http://localhost:8080/hello` (it should return `"Die Anwendung funktioniert!"`).
