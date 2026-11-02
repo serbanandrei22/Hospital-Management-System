@@ -3,7 +3,7 @@ package com.example.hospital.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Patient {
+public class Patient implements HasId {
     private String id;
     private String name;
     private List<String> appointments;
