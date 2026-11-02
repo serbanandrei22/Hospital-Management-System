@@ -1,6 +1,6 @@
 package com.example.hospital.model;
 
-public class Department {
+public class Department implements HasId{
     private String id;
     private String name;
     private String hospitalId;

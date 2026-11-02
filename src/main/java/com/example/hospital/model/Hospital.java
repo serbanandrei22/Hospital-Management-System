@@ -1,7 +1,7 @@
 package com.example.hospital.model;
 import java.util.ArrayList;
 import java.util.List;
-public class Hospital {
+public class Hospital implements HasId {
     private String id;
     private String name;
     private String city;
