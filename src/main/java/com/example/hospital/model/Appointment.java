@@ -5,18 +5,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Appointment implements HasId {
+    public enum AppointmentStatus {
+        ACTIVE,
+        COMPLETED
+    }
+
     private String id;
     private String departmentId;
     private String patientId;
     private LocalDate admissionDate;
-    private String status;
+
+    private AppointmentStatus status;
     private List<String> medicalStaff;
 
     public Appointment() {
         this.medicalStaff = new ArrayList<>();
     }
 
-    public Appointment(String id, String departmentId, String patientId, LocalDate admissionDate, String status) {
+    public Appointment(String id, String departmentId, String patientId, LocalDate admissionDate, AppointmentStatus status) {
         this.id = id;
         this.departmentId = departmentId;
         this.patientId = patientId;
@@ -41,9 +47,9 @@ public class Appointment implements HasId {
         return admissionDate;}
     public void setAdmissionDate(LocalDate admissionDate) {
         this.admissionDate = admissionDate;}
-    public String getStatus() {
+    public AppointmentStatus getStatus() {
         return status;}
-    public void setStatus(String status) {
+    public void setStatus(AppointmentStatus status) {
         this.status = status;}
     public List<String> getMedicalStaff() {
         return medicalStaff;}

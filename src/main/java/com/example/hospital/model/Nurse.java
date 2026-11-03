@@ -1,18 +1,24 @@
 package com.example.hospital.model;
 
 public class Nurse extends MedicalStaff {
-    private String qualificationLevel;
+
+    public enum QualificationLevel {
+        REGISTERED_NURSE,
+        PRACTICAL_NURSE
+    }
+    private QualificationLevel qualificationLevel;
+
     public Nurse(){
         super();
     }
-    public Nurse(String id,String name,String departmentId,String qualificationLevel){
+    public Nurse(String id,String name,String departmentId,QualificationLevel qualificationLevel){
         super(id,name,departmentId);
         this.qualificationLevel=qualificationLevel;
     }
-    public String getQualificationLevel(){
+    public QualificationLevel getQualificationLevel(){
         return qualificationLevel;
     }
-    public void setQualificationLevel(String qualificationLevel){
+    public void setQualificationLevel(QualificationLevel qualificationLevel){
         this.qualificationLevel=qualificationLevel;
     }
 }

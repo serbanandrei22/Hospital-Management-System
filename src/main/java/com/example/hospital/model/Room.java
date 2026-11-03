@@ -4,11 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Room implements HasId {
+    public enum RoomStatus{
+        AVAILABLE,
+        OCCUPIED
+    }
+
     private String id;
     private String hospitalId;
     private double capacity;
     private String number;
-    private String status;
+    private RoomStatus status;
     private List<String> appointments;
 
 
@@ -17,7 +22,7 @@ public class Room implements HasId {
     public Room() {
         this.appointments = new ArrayList<>();}
 
-    public Room(String id, String hospitalId, double capacity, String number, String status, int floorNumber) {
+    public Room(String id, String hospitalId, double capacity, String number, RoomStatus status, int floorNumber) {
         this.id = id;
         this.hospitalId = hospitalId;
         this.capacity = capacity;
@@ -42,9 +47,9 @@ public class Room implements HasId {
         return number;}
     public void setNumber(String number) {
         this.number = number;}
-    public String getStatus() {
+    public RoomStatus getStatus() {
         return status;}
-    public void setStatus(String status) {
+    public void setStatus(RoomStatus status) {
         this.status = status;}
     public List<String> getAppointments() {
         return appointments;}
