@@ -15,10 +15,10 @@ public class RoomService {
         this.roomRepository= roomRepository;
     }
 
-    public void SaveRoom(Room room){
+    public void saveRoom(Room room){
         roomRepository.save(room);
     }
-    public Room getRoomByID(String id){
+    public Room getRoomById(String id){
         return roomRepository.findById(id);
     }
     public List<Room> getAllRooms(){

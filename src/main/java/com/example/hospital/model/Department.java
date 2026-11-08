@@ -26,7 +26,7 @@ public class Department implements HasId {
     public String getHospitalId(){
         return hospitalId;
     }
-    public void getHospitalId(String hospitalId){
+    public void setHospitalId(String hospitalId){
         this.hospitalId=hospitalId;
     }
 }
