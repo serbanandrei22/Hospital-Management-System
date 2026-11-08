@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Lista Departamente</title></head>
+<body>
+<h1>Toate Departamentele</h1>
+<a th:href="@{/department/new}">Adaugă un departament nou</a>
+<br><br>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID Departament</th>
+        <th>Nume</th>
+        <th>ID Spital</th>
+        <th>Acțiuni</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="dep : ${departments}">
+        <td th:text="${dep.id}"></td>
+        <td th:text="${dep.name}"></td>
+        <td th:text="${dep.hospitalId}"></td>
+        <td>
+            <form th:action="@{'/department/' + ${dep.id} + '/delete'}" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

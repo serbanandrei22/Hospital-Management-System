@@ -19,7 +19,7 @@ public class DepartmentController {
     }
     @GetMapping("/new")
     public String showCreateForm(Model model){
-        model.addAttribute("departments", new Department());
+        model.addAttribute("department", new Department());
         return "department/form";
     }
     @PostMapping
