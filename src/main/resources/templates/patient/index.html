@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista Pacienți</title>
+</head>
+<body>
+<h1>Toți Pacienții</h1>
+
+<a th:href="@{/patient/new}">Adaugă un pacient nou</a>
+<br><br>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID Pacient</th>
+        <th>Nume</th>
+        <th>Acțiuni</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="p : ${patients}">
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.name}"></td>
+        <td>
+            <form th:action="@{'/patient/' + ${p.id} + '/delete'}" method="post" style="display:inline;">
+            <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
