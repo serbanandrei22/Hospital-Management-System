@@ -28,7 +28,7 @@ public class AppointmentController {
         appointmentService.saveAppointment(appointment);
         return "redirect:/appointment";
     }
-    @PostMapping("/delete")
+    @PostMapping("/{id}/delete")
     public String deleteAppointment(@PathVariable String id){
         appointmentService.deleteAppointment(id);
         return "redirect:/appointment";

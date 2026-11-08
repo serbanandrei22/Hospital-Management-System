@@ -27,7 +27,7 @@ public class PatientController {
         patientService.savePatient(patient);
         return "redirect:/patient";
     }
-    @PostMapping("/patient/delete")
+    @PostMapping("/patient/{id}/delete")
     public String deletePatient(@PathVariable String id){
         patientService.deletePatient(id);
         return "redirect:/patient";

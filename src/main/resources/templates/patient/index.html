@@ -14,6 +14,9 @@
     <tr>
         <th>ID Pacient</th>
         <th>Nume</th>
+        <th>Email</th>
+        <th>Telefon</th>
+        <th>Programări</th>
         <th>Acțiuni</th>
     </tr>
     </thead>
@@ -21,6 +24,9 @@
     <tr th:each="p : ${patients}">
         <td th:text="${p.id}"></td>
         <td th:text="${p.name}"></td>
+        <td th:text="${p.email}"></td>
+        <td th:text="${p.phoneNumber}"></td>
+        <td th:text="${p.appointments}"></td>
         <td>
             <form th:action="@{'/patient/' + ${p.id} + '/delete'}" method="post" style="display:inline;">
             <button type="submit">Delete</button>

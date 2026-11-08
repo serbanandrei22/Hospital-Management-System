@@ -14,6 +14,15 @@
     <label>Nume Pacient:</label>
     <input type="text" th:field="*{name}" required/><br><br>
 
+    <label>Email:</label>
+    <input type="email" th:field="*{email}"/><br><br>
+
+    <label>Telefon:</label>
+    <input type="text" th:field="*{phoneNumber}"/><br><br>
+
+    <label>ID-uri Programări (separate prin virgulă):</label>
+    <input type="text" th:field="*{appointments}" placeholder="ex: prog1, prog2"/><br><br>
+
     <button type="submit">Salvează</button>
 </form>
 
