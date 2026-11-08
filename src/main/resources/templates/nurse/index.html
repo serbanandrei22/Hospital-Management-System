@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Lista Asistenți</title></head>
+<body>
+<h1>Toți Asistenții Medicali</h1>
+<a th:href="@{/nurse/new}">Adaugă un asistent nou</a>
+<br><br>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nume</th>
+        <th>ID Departament</th>
+        <th>Nivel Calificare</th>
+        <th>Acțiuni</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="n : ${nurses}">
+        <td th:text="${n.id}"></td>
+        <td th:text="${n.name}"></td>
+        <td th:text="${n.departmentId}"></td>
+        <td th:text="${n.qualificationLevel}"></td>
+        <td>
+            <form th:action="@{'/nurse/' + ${n.id} + '/delete'}" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
