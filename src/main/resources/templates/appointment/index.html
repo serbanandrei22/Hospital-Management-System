@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymleaf.org">
+<head><title>Lista Programari</title></head>
+<body>
+    <h1>Toate Programarile</h1>
+    <a th:href="@{appointment/new}">Adauga o programare noua</a>
+    <br><br>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>ID Programare</th>
+            <th>ID Pacient</th>
+            <Th>Data</Th>
+            <th>Actiuni</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="a : ${appointments}">
+            <td th:text="${a.id}"></td>
+            <td th:text="${a.patientId}"></td>
+            <td th:text="${a.date}"></td>
+            <td>
+                <from th:action="@{'/appointment/' + ${a.id} + '/delete'}" method="post" style="display:inline;">
+                    <button type="submit">Delete></button>
+                </from>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

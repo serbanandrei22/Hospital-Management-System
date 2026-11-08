@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Adauga Programare</title></head>
+<body>
+    <h1>Adauga o Programare noua</h1>
+    <form th:action="@{/appointment}" th:object="${appointment}" method="post">
+        <label>ID Programare:</label>
+        <input type="text" th:field="*{patientId}" required/><br><br>
+
+        <label>ID Pacient:</label>
+        <input type="text" th:field="*{patientId}" required/><br><br>
+        <label>Dată:</label>
+        <input type="text" th:field="*{date}" placeholder="ex: 2026-11-08"/><br><br>
+
+        <button type="submit">Salveaza</button>
+    </form>
+<br><a th:href="@{/appointment}">Inapoi la lista</a>
+</body>
+</html>
