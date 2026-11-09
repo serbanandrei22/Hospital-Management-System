@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Lista Doctori</title></head>
+<body>
+<h1>Toți Doctorii</h1>
+<a th:href="@{/doctor/new}">Adaugă un doctor nou</a>
+<br><br>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID Doctor</th>
+        <th>Nume Doctor</th>
+        <th>ID Departament</th>
+        <th>Număr Licență</th>
+        <th>Acțiuni</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="d : ${doctors}">
+        <td th:text="${d.id}"></td>
+        <td th:text="${d.name}"></td>
+        <td th:text="${d.departmentId}"></td>
+        <td th:text="${d.licenseNumber}"></td>
+        <td>
+            <form th:action="@{'/doctor/' + ${d.id} + '/delete'}" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
