@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Adaugă Cameră</title></head>
+<head><title>Adauga Camera</title></head>
 <body>
-<h1>Adaugă o cameră nouă</h1>
+<h1>Adauga o camera noua</h1>
 <form th:action="@{/room}" th:object="${room}" method="post">
-    <label>ID Cameră:</label>
+    <label>ID Camera:</label>
     <input type="text" th:field="*{id}" required/><br><br>
 
-    <label>Număr Cameră:</label>
+    <label>Numar Camera:</label>
     <input type="text" th:field="*{number}" required/><br><br>
 
     <label>ID Spital:</label>
@@ -24,8 +24,8 @@
         <option th:each="s : ${statuses}" th:value="${s}" th:text="${s}"></option>
     </select><br><br>
 
-    <button type="submit">Salvează</button>
+    <button type="submit">Salveaza</button>
 </form>
-<br><a th:href="@{/room}">Înapoi la listă</a>
+<br><a th:href="@{/room}">Inapoi la lista</a>
 </body>
 </html>

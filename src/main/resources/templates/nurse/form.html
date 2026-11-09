@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Adaugă Asistent</title></head>
+<head><title>Adauga Asistent</title></head>
 <body>
-<h1>Adaugă un asistent nou</h1>
+<h1>Adauga un asistent nou</h1>
 <form th:action="@{/nurse}" th:object="${nurse}" method="post">
 
     <label>ID Asistent:</label>
     <input type="text" th:field="*{id}" required/><br><br>
 
-    <label>Nume Asistent(ă):</label>
+    <label>Nume Asistent(a):</label>
     <input type="text" th:field="*{name}" required/><br><br>
 
     <label>ID Departament:</label>
@@ -17,8 +17,8 @@
     <label>Nivel Calificare (REGISTERED_NURSE sau PRACTICAL_NURSE):</label>
     <input type="text" th:field="*{qualificationLevel}"/><br><br>
 
-    <button type="submit">Salvează</button>
+    <button type="submit">Salveaza</button>
 </form>
-<br><a th:href="@{/nurse}">Înapoi la listă</a>
+<br><a th:href="@{/nurse}">Inapoi la lista</a>
 </body>
 </html>

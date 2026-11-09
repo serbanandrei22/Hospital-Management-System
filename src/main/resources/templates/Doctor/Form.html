@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Adaugă Doctor</title></head>
+<head><title>Adauga Doctor</title></head>
 <body>
-<h1>Adaugă un doctor nou</h1>
+<h1>Adauga un doctor nou</h1>
 <form th:action="@{/doctor}" th:object="${doctor}" method="post">
     <label>ID Doctor:</label>
     <input type="text" th:field="*{id}" required/><br><br>
@@ -13,11 +13,11 @@
     <label>ID Departament:</label>
     <input type="text" th:field="*{departmentId}"/><br><br>
 
-    <label>Număr Licență (License Number):</label>
+    <label>Numar Licenta (License Number):</label>
     <input type="text" th:field="*{licenseNumber}"/><br><br>
 
-    <button type="submit">Salvează</button>
+    <button type="submit">Salveaza</button>
 </form>
-<br><a th:href="@{/doctor}">Înapoi la listă</a>
+<br><a th:href="@{/doctor}">Inapoi la lista</a>
 </body>
 </html>

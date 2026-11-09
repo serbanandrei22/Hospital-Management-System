@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Adaugă Departament</title></head>
+<head><title>Adauga Departament</title></head>
 <body>
-<h1>Adaugă un departament nou</h1>
+<h1>Adauga un departament nou</h1>
 <form th:action="@{/department}" th:object="${department}" method="post">
 
     <label>ID Departament:</label>
@@ -14,8 +14,8 @@
     <label>ID Spital:</label>
     <input type="text" th:field="*{hospitalId}"/><br><br>
 
-    <button type="submit">Salvează</button>
+    <button type="submit">Salveaza</button>
 </form>
-<br><a th:href="@{/department}">Înapoi la listă</a>
+<br><a th:href="@{/department}">Inapoi la lista</a>
 </body>
 </html>

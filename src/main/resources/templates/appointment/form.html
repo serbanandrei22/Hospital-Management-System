@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Adaugă Programare</title></head>
+<head><title>Adauga Programare</title></head>
 <body>
-<h1>Adaugă o programare nouă</h1>
+<h1>Adauga o programare noua</h1>
 <form th:action="@{/appointment}" th:object="${appointment}" method="post">
 
     <label>ID Programare:</label>
@@ -20,8 +20,8 @@
     <label>Status (scrie ACTIVE sau COMPLETED):</label>
     <input type="text" th:field="*{status}"/><br><br>
 
-    <button type="submit">Salvează</button>
+    <button type="submit">Salveaza</button>
 </form>
-<br><a th:href="@{/appointment}">Înapoi la listă</a>
+<br><a th:href="@{/appointment}">Inapoi la lista</a>
 </body>
 </html>
