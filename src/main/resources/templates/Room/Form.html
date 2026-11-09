@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Adaugă Cameră</title></head>
+<body>
+<h1>Adaugă o cameră nouă</h1>
+<form th:action="@{/room}" th:object="${room}" method="post">
+    <label>ID Cameră:</label>
+    <input type="text" th:field="*{id}" required/><br><br>
+
+    <label>Număr Cameră:</label>
+    <input type="text" th:field="*{number}" required/><br><br>
+
+    <label>ID Spital:</label>
+    <input type="text" th:field="*{hospitalId}"/><br><br>
+
+    <label>Etaj (Floor Number):</label>
+    <input type="number" th:field="*{floorNumber}"/><br><br>
+
+    <label>Capacitate:</label>
+    <input type="number" step="any" th:field="*{capacity}"/><br><br>
+
+    <label>Status:</label>
+    <select th:field="*{status}">
+        <option th:each="s : ${statuses}" th:value="${s}" th:text="${s}"></option>
+    </select><br><br>
+
+    <button type="submit">Salvează</button>
+</form>
+<br><a th:href="@{/room}">Înapoi la listă</a>
+</body>
+</html>
