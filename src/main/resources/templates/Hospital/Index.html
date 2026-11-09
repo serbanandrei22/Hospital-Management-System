@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Lista Spitale</title></head>
+<body>
+<h1>Toate Spitalele</h1>
+<a th:href="@{/hospital/new}">Adaugă un spital nou</a>
+<br><br>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID Spital</th>
+        <th>Nume Spital</th>
+        <th>Oraș</th>
+        <th>Urgențe (Hotline)</th>
+        <th>Acțiuni</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="h : ${hospitals}">
+        <td th:text="${h.id}"></td>
+        <td th:text="${h.name}"></td>
+        <td th:text="${h.city}"></td>
+        <td th:text="${h.emergencyHotline}"></td>
+        <td>
+            <form th:action="@{'/hospital/' + ${h.id} + '/delete'}" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
