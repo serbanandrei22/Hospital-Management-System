@@ -24,9 +24,9 @@
             <td th:text="${a.admissionDate}"></td>
             <td th:text="${a.status}"></td>
             <td>
-                <from th:action="@{'/appointment/' + ${a.id} + '/delete'}" method="post" style="display:inline;">
-                    <button type="submit">Delete></button>
-                </from>
+                <form th:action="@{'/appointment/' + ${a.id} + '/delete'}" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
             </td>
         </tr>
         </tbody>
