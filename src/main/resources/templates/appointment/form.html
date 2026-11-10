@@ -17,8 +17,10 @@
     <label>Data Admiterii:</label>
     <input type="date" th:field="*{admissionDate}"/><br><br>
 
-    <label>Status (scrie ACTIVE sau COMPLETED):</label>
-    <input type="text" th:field="*{status}"/><br><br>
+    <label>Status:</label>
+    <select th:field="*{status}">
+        <option th:each="s : ${statuses}" th:value="${s}" th:text="${s}"></option>
+    </select><br><br>
 
     <button type="submit">Salveaza</button>
 </form>

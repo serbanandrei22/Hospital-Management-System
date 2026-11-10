@@ -19,7 +19,8 @@ public class NurseController {
     }
     @GetMapping("/new")
     public String showCreateForm(Model model){
-        model.addAttribute("nurse",new Nurse());
+        model.addAttribute("nurse", new Nurse());
+        model.addAttribute("statuses",Nurse.QualificationLevel.values());
         return "nurse/form";
     }
     @PostMapping

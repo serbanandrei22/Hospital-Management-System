@@ -14,8 +14,10 @@
     <label>ID Departament:</label>
     <input type="text" th:field="*{departmentId}"/><br><br>
 
-    <label>Nivel Calificare (REGISTERED_NURSE sau PRACTICAL_NURSE):</label>
-    <input type="text" th:field="*{qualificationLevel}"/><br><br>
+    <label>Status:</label>
+    <select th:field="*{qualificationLevel}">
+        <option th:each="s : ${statuses}" th:value="${s}" th:text="${s}"></option>
+    </select><br><br>
 
     <button type="submit">Salveaza</button>
 </form>

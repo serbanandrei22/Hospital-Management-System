@@ -21,6 +21,7 @@ public class AppointmentController {
     @GetMapping("/new")
     public String showCreateForm(Model model){
         model.addAttribute("appointment",new Appointment());
+        model.addAttribute("statuses", Appointment.AppointmentStatus.values());
         return "appointment/form";
     }
     @PostMapping
