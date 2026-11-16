@@ -28,6 +28,21 @@ public class NurseController {
         nurseService.saveNurse(nurse);
         return "redirect:/nurse";
     }
+    @GetMapping("/{id}")
+    public String showNurseDetails(@PathVariable String id, Model model) {
+        Nurse nurse = nurseService.getNurseById(id);
+        if (nurse == null) return "redirect:/nurse";
+        model.addAttribute("nurse", nurse);
+        return "nurse/details";
+    }
+    @GetMapping("/{id}/edit")
+    public String showEditForm(@PathVariable String id, Model model) {
+        Nurse nurse = nurseService.getNurseById(id);
+        if (nurse == null) return "redirect:/nurse";
+        model.addAttribute("nurse", nurse);
+        model.addAttribute("statuses", Nurse.QualificationLevel.values());
+        return "nurse/form";
+    }
     @PostMapping("/{id}/delete")
     public String deleteNurse(@PathVariable String id){
         nurseService.deleteNurse(id);
