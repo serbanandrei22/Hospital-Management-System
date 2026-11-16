@@ -35,6 +35,7 @@ public class AppointmentService {
                 throw new IllegalArgumentException("Eroare: Departamentul cu ID-ul " + appointment.getDepartmentId() + " nu exista!");
             }
         }
+        appointmentRepository.save(appointment);
     }
     public void deleteAppointment(String id){
         appointmentRepository.delete(id);
