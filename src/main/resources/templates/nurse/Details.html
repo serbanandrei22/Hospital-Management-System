@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Nurse Details</title>
+</head>
+<body>
+<h1>Nurse Details</h1>
+
+<div>
+    <p><strong>Nurse ID:</strong> <span th:text="${nurse.id}"></span></p>
+    <p><strong>Name:</strong> <span th:text="${nurse.name}"></span></p>
+    <p><strong>Department ID:</strong> <span th:text="${nurse.departmentId}"></span></p>
+    <p><strong>Qualification Level:</strong> <span th:text="${nurse.qualificationLevel}"></span></p>
+</div>
+
+<br>
+<a th:href="@{/nurse/{id}/edit(id=${nurse.id})}">Edit</a> |
+<a th:href="@{/nurse}">Back to List</a>
+</body>
+</html>
