@@ -26,6 +26,8 @@
         <td th:text="${a.admissionDate}"></td>
         <td th:text="${a.status}"></td>
         <td>
+            <a th:href="@{/appointment/{id}(id=${a.id})}">Details</a> |
+            <a th:href="@{/appointment/{id}/edit(id=${a.id})}">Edit</a> |
             <form th:action="@{'/appointment/' + ${a.id} + '/delete'}" method="post" style="display:inline;">
                 <button type="submit">Delete</button>
             </form>

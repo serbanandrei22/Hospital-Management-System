@@ -22,6 +22,8 @@
         <td th:text="${dep.name}"></td>
         <td th:text="${dep.hospitalId}"></td>
         <td>
+            <a th:href="@{/department/{id}(id=${dep.id})}">Details</a> |
+            <a th:href="@{/department/{id}/edit(id=${dep.id})}">Edit</a> |
             <form th:action="@{'/department/' + ${dep.id} + '/delete'}" method="post" style="display:inline;">
                 <button type="submit">Delete</button>
             </form>

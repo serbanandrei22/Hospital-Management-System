@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Appointment Details</title>
+</head>
+<body>
+<h1>Appointment Details</h1>
+
+<div>
+    <p><strong>Appointment ID:</strong> <span th:text="${appointment.id}"></span></p>
+    <p><strong>Patient ID:</strong> <span th:text="${appointment.patientId}"></span></p>
+    <p><strong>Department ID:</strong> <span th:text="${appointment.departmentId}"></span></p>
+    <p><strong>Admission Date:</strong> <span th:text="${appointment.admissionDate}"></span></p>
+    <p><strong>Status:</strong> <span th:text="${appointment.status}"></span></p>
+</div>
+
+<br>
+<a th:href="@{/appointment/{id}/edit(id=${appointment.id})}">Edit</a> |
+<a th:href="@{/appointment}">Back to List</a>
+</body>
+</html>

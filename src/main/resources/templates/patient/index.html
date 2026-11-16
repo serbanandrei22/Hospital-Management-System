@@ -28,6 +28,8 @@
         <td th:text="${p.phoneNumber}"></td>
         <td th:text="${p.appointments}"></td>
         <td>
+            <a th:href="@{/patient/{id}(id=${p.id})}">Details</a> |
+            <a th:href="@{/patient/{id}/edit(id=${p.id})}">Edit</a> |
             <form th:action="@{'/patient/' + ${p.id} + '/delete'}" method="post" style="display:inline;">
                 <button type="submit">Delete</button>
             </form>

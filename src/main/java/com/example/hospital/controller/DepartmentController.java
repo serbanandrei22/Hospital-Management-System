@@ -27,6 +27,20 @@ public class DepartmentController {
         departmentService.saveDepartment(department);
         return "redirect:/department";
     }
+    @GetMapping("/{id}")
+    public String showDepartmentDetails(@PathVariable String id, Model model) {
+        Department department = departmentService.getDepartmentById(id);
+        if (department == null) return "redirect:/department";
+        model.addAttribute("department", department);
+        return "department/details";
+    }
+    @GetMapping("/{id}/edit")
+    public String showEditForm(@PathVariable String id, Model model) {
+        Department department = departmentService.getDepartmentById(id);
+        if (department == null) return "redirect:/department";
+        model.addAttribute("department", department);
+        return "department/form";
+    }
     @PostMapping("/{id}/delete")
     public String deleteDepartment(@PathVariable String id){
         departmentService.deleteDepartment(id);
