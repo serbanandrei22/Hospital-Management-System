@@ -1,5 +1,6 @@
 package com.example.hospital.repository;
 
+import com.example.hospital.model.HasId;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class InFileRepository<T> {
+public class InFileRepository<T extends HasId> {
     protected final String filePath;
     protected final Class<T> entityType;
     protected final ObjectMapper objectMapper;
@@ -51,7 +52,18 @@ public class InFileRepository<T> {
 
         String id = getEntityId(item);
         if (id == null || id.trim().isEmpty()) {
-            id = UUID.randomUUID().toString().substring(0, 8);
+            int maxId = 0;
+            for (T existingItem : items) {
+                try {
+                    String existingId = getEntityId(existingItem);
+                    int numericId = Integer.parseInt(existingId);
+                    if (numericId > maxId) {
+                        maxId = numericId;
+                    }
+                } catch (NumberFormatException e) {
+                }
+            }
+            id = String.valueOf(maxId + 1);
             setEntityId(item, id);
         }
 
@@ -65,23 +77,26 @@ public class InFileRepository<T> {
     public void delete(String id) {
         List<T> items = findAll();
         items.removeIf(item -> getEntityId(item).equals(id));
+
+        int index = 1;
+        for (T item : items) {
+            String currentId = getEntityId(item);
+            try {
+                Integer.parseInt(currentId);
+                setEntityId(item, String.valueOf(index));
+                index++;
+            } catch (NumberFormatException e) {
+            }
+        }
+
         saveAll(items);
     }
 
     private String getEntityId(T item) {
-        try {
-            Object idObj = item.getClass().getMethod("getId").invoke(item);
-            return idObj != null ? idObj.toString() : "";
-        } catch (Exception e) {
-            return "";
-        }
+        return item.getId() != null ? item.getId() : "";
     }
 
     private void setEntityId(T item, String id) {
-        try {
-            item.getClass().getMethod("setId", String.class).invoke(item, id);
-        } catch (Exception e) {
-
-        }
+        item.setId(id);
     }
 }

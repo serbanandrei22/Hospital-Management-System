@@ -31,6 +31,7 @@ public class RoomController {
         return "redirect:/room";
     }
 
+
     @PostMapping("/{id}/delete")
     public String deleteRoom(@PathVariable String id) {
         roomService.deleteRoom(id);

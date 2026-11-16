@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public class AppointmentRepository extends InFileRepository<Appointment>{
     public AppointmentRepository(){
-        super("src/main/resources/data/appointments.json",Appointment.class);
+        super("src/main/resources/data/appointment.json",Appointment.class);
     }
     public List<Appointment> findByPatientId(String patientId){
         List<Appointment> result = new ArrayList<>();
