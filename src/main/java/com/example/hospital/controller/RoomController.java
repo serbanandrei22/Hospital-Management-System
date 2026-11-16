@@ -25,6 +25,22 @@ public class RoomController {
         return "room/form";
     }
 
+
+    @GetMapping("/{id}")
+    public String showRoomDetails(@PathVariable String id, Model model) {
+        Room room = roomService.getRoomById(id);
+        if (room == null) return "redirect:/room";
+        model.addAttribute("room", room);
+        return "room/details";
+    }
+    @GetMapping("/{id}/edit")
+    public String showEditForm(@PathVariable String id, Model model) {
+        Room room = roomService.getRoomById(id);
+        if (room == null) return "redirect:/room";
+        model.addAttribute("room", room);
+        model.addAttribute("statuses", Room.RoomStatus.values());
+        return "room/form";
+    }
     @PostMapping
     public String createRoom(@ModelAttribute Room room) {
         roomService.saveRoom(room);
