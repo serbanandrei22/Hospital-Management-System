@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Lista Pacienti</title>
+    <title>Patients List</title>
 </head>
 <body>
-<h1>Toti Pacientii</h1>
+<h1>All Patients</h1>
 
-<a th:href="@{/patient/new}">Adauga un pacient nou</a>
+<a th:href="@{/patient/new}">Add a New Patient</a>
 <br><br>
 
 <table border="1">
     <thead>
     <tr>
-        <th>ID Pacient</th>
-        <th>Nume</th>
+        <th>Patient ID</th>
+        <th>Name</th>
         <th>Email</th>
-        <th>Telefon</th>
-        <th>Programari</th>
-        <th>Actiuni</th>
+        <th>Phone Number</th>
+        <th>Appointments</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -29,7 +29,7 @@
         <td th:text="${p.appointments}"></td>
         <td>
             <form th:action="@{'/patient/' + ${p.id} + '/delete'}" method="post" style="display:inline;">
-            <button type="submit">Delete</button>
+                <button type="submit">Delete</button>
             </form>
         </td>
     </tr>

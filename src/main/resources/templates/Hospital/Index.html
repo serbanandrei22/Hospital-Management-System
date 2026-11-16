@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Lista Spitale</title></head>
+<head>
+    <title>Hospitals List</title>
+</head>
 <body>
-<h1>Toate Spitalele</h1>
-<a th:href="@{/hospital/new}">Adauga un spital nou</a>
+<h1>All Hospitals</h1>
+<a th:href="@{/hospital/new}">Add a New Hospital</a>
 <br><br>
 <table border="1">
     <thead>
     <tr>
-        <th>ID Spital</th>
-        <th>Nume Spital</th>
-        <th>Oras</th>
-        <th>Urgente (Hotline)</th>
-        <th>Actiuni</th>
+        <th>Hospital ID</th>
+        <th>Hospital Name</th>
+        <th>City</th>
+        <th>Emergency Hotline</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>

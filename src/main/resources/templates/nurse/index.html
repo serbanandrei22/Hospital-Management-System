@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Lista Asistenti</title></head>
+<head>
+    <title>Nurses List</title>
+</head>
 <body>
-<h1>Toti Asistentii Medicali</h1>
-<a th:href="@{/nurse/new}">Adauga un asistent nou</a>
+<h1>All Nurses</h1>
+<a th:href="@{/nurse/new}">Add a New Nurse</a>
 <br><br>
 <table border="1">
     <thead>
     <tr>
         <th>ID</th>
-        <th>Nume</th>
-        <th>ID Departament</th>
-        <th>Nivel Calificare</th>
-        <th>Actiuni</th>
+        <th>Name</th>
+        <th>Department ID</th>
+        <th>Qualification Level</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>

@@ -1,0 +1,12 @@
+[
+  { "id": "1", "name": "Cardiologie", "hospitalId": "h1" },
+  { "id": "2", "name": "Neurologie", "hospitalId": "h1" },
+  { "id": "3", "name": "Pediatrie", "hospitalId": "h2" },
+  { "id": "4", "name": "Ortopedie", "hospitalId": "h2" },
+  { "id": "5", "name": "Chirurgie", "hospitalId": "h3" },
+  { "id": "6", "name": "Oftalmologie", "hospitalId": "h3" },
+  { "id": "7", "name": "Dermatologie", "hospitalId": "h4" },
+  { "id": "8", "name": "Psihiatrie", "hospitalId": "h4" },
+  { "id": "9", "name": "ORL", "hospitalId": "h5" },
+  { "id": "10", "name": "Oncologie", "hospitalId": "h5" }
+]

@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Adauga Asistent</title></head>
+<head>
+    <title>Add Nurse</title>
+</head>
 <body>
-<h1>Adauga un asistent nou</h1>
+<h1>Add a New Nurse</h1>
 <form th:action="@{/nurse}" th:object="${nurse}" method="post">
 
-    <label>ID Asistent:</label>
-    <input type="text" th:field="*{id}" required/><br><br>
+    <label>Nurse ID:</label>
+    <input type="text" th:field="*{id}" placeholder="Leave blank for auto-generation"/><br><br>
 
-    <label>Nume Asistent(a):</label>
+    <label>Nurse Name:</label>
     <input type="text" th:field="*{name}" required/><br><br>
 
-    <label>ID Departament:</label>
+    <label>Department ID:</label>
     <input type="text" th:field="*{departmentId}"/><br><br>
 
-    <label>Status:</label>
+    <label>Qualification Level:</label>
     <select th:field="*{qualificationLevel}">
         <option th:each="s : ${statuses}" th:value="${s}" th:text="${s}"></option>
     </select><br><br>
 
-    <button type="submit">Salveaza</button>
+    <button type="submit">Save</button>
 </form>
-<br><a th:href="@{/nurse}">Inapoi la lista</a>
+<br><a th:href="@{/nurse}">Back to list</a>
 </body>
 </html>
