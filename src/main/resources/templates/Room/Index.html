@@ -26,6 +26,8 @@
         <td th:text="${r.capacity}"></td>
         <td th:text="${r.status}"></td>
         <td>
+            <a th:href="@{/room/{id}(id=${r.id})}">Details</a> |
+            <a th:href="@{/room/{id}/edit(id=${r.id})}">Edit</a> |
             <form th:action="@{'/room/' + ${r.id} + '/delete'}" method="post" style="display:inline;">
                 <button type="submit">Delete</button>
             </form>
