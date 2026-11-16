@@ -32,6 +32,20 @@ public class DoctorController {
         doctorService.saveDoctor(doctor);
         return "redirect:/doctor";
     }
+    @GetMapping("/{id}")
+    public String showDoctorDetails(@PathVariable String id, Model model) {
+        Doctor doctor = doctorService.getDoctorById(id);
+        if (doctor == null) return "redirect:/doctor";
+        model.addAttribute("doctor", doctor);
+        return "doctor/details";
+    }
+    @GetMapping("/{id}/edit")
+    public String showEditForm(@PathVariable String id, Model model) {
+        Doctor doctor = doctorService.getDoctorById(id);
+        if (doctor == null) return "redirect:/doctor";
+        model.addAttribute("doctor", doctor);
+        return "doctor/form";
+    }
 
     @PostMapping("/{id}/delete")
     public String deleteDoctor(@PathVariable String id) {

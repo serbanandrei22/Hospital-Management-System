@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Add Doctor</title>
+    <title>Doctor Form</title>
 </head>
 <body>
-<h1>Add a New Doctor</h1>
+<h1>Add/Edit Doctor</h1>
 <form th:action="@{/doctor}" th:object="${doctor}" method="post">
     <label>Doctor ID:</label>
     <input type="text" th:field="*{id}" placeholder="Leave blank for auto-generation"/><br><br>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Add Hospital</title>
+    <title>Hospital Form</title>
 </head>
 <body>
-<h1>Add a New Hospital</h1>
+<h1>Add/Edit Hospital</h1>
 <form th:action="@{/hospital}" th:object="${hospital}" method="post">
     <label>Hospital ID:</label>
     <input type="text" th:field="*{id}" placeholder="Leave blank for auto-generation"/><br><br>

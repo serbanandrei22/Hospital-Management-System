@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Add Room</title></head>
+<head><title>Room Form</title></head>
 <body>
-<h1>Add a New Room</h1>
+<h1>Add/Edit Room</h1>
 <form th:action="@{/room}" th:object="${room}" method="post">
     <label>Room ID:</label>
     <input type="text" th:field="*{id}" placeholder="Leave blank for auto-generation"/><br><br>
