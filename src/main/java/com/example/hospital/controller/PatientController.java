@@ -27,6 +27,20 @@ public class PatientController {
         patientService.savePatient(patient);
         return "redirect:/patient";
     }
+    @GetMapping("/{id}")
+    public String showPatientDetails(@PathVariable String id, Model model) {
+        Patient patient = patientService.getPatientById(id);
+        if (patient == null) return "redirect:/patient";
+        model.addAttribute("patient", patient);
+        return "patient/details";
+    }
+    @GetMapping("/{id}/edit")
+    public String showEditForm(@PathVariable String id, Model model) {
+        Patient patient = patientService.getPatientById(id);
+        if (patient == null) return "redirect:/patient";
+        model.addAttribute("patient", patient);
+        return "patient/form";
+    }
     @PostMapping("/patient/{id}/delete")
     public String deletePatient(@PathVariable String id){
         patientService.deletePatient(id);
