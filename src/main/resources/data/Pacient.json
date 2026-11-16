@@ -1,0 +1,12 @@
+[
+  {"id":"p1","name":"Alexandru Marin","email":"alex.marin@email.com","phoneNumber":"0721111111","appointments":["a1","a2"]},
+  {"id":"p2","name":"Diana Constantinescu","email":"diana.c@email.com","phoneNumber":"0722222222","appointments":["a3"]},
+  {"id":"p3","name":"Gabriel Ionescu","email":"gabriel.ionescu@email.com","phoneNumber":"0723333333","appointments":["a4"]},
+  {"id":"p4","name":"Andreea Matei","email":"andreea.matei@email.com","phoneNumber":"0724444444","appointments":[]},
+  {"id":"p5","name":"Vlad Petrescu","email":"vlad.petrescu@email.com","phoneNumber":"0725555555","appointments":["a5"]},
+  {"id":"p6","name":"Sorin Popa","email":"sorin.popa@email.com","phoneNumber":"0726666666","appointments":[]},
+  {"id":"p7","name":"Mihaela Dinu","email":"mihaela.dinu@email.com","phoneNumber":"0727777777","appointments":["a6"]},
+  {"id":"p8","name":"Florin Enache","email":"florin.enache@email.com","phoneNumber":"0728888888","appointments":[]},
+  {"id":"p9","name":"Cristina Albu","email":"cristina.albu@email.com","phoneNumber":"0729999999","appointments":["a7"]},
+  {"id":"p10","name":"Bogdan Georgescu","email":"bogdan.g@email.com","phoneNumber":"0730000000","appointments":[]}
+]
