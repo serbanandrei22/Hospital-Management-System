@@ -28,9 +28,15 @@ public class DoctorController {
     }
 
     @PostMapping
-    public String createDoctor(@ModelAttribute Doctor doctor) {
-        doctorService.saveDoctor(doctor);
-        return "redirect:/doctor";
+    public String createDoctor(@ModelAttribute Doctor doctor, Model model) {
+        try {
+            doctorService.saveDoctor(doctor);
+            return "redirect:/doctor";
+        } catch (IllegalArgumentException e) {
+            model.addAttribute("errorMessage", e.getMessage());
+            model.addAttribute("doctor", doctor);
+            return "doctor/form";
+        }
     }
     @GetMapping("/{id}")
     public String showDoctorDetails(@PathVariable String id, Model model) {

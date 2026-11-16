@@ -1,78 +1,78 @@
 [ {
   "id" : "1",
-  "departmentId" : "d1",
-  "patientId" : "p1",
+  "departmentId" : "1",
+  "patientId" : "1",
   "admissionDate" : [ 2026, 11, 20 ],
   "status" : "COMPLETED",
   "medicalStaff" : [ ]
 }, {
   "id" : "2",
-  "departmentId" : "d2",
-  "patientId" : "p2",
+  "departmentId" : "2",
+  "patientId" : "2",
   "admissionDate" : [ 2026, 11, 21 ],
   "status" : "ACTIVE",
   "medicalStaff" : [ ]
 }, {
   "id" : "3",
-  "departmentId" : "d3",
-  "patientId" : "p3",
+  "departmentId" : "3",
+  "patientId" : "3",
   "admissionDate" : [ 2026, 11, 22 ],
   "status" : "COMPLETED",
   "medicalStaff" : [ ]
 }, {
   "id" : "4",
-  "departmentId" : "d4",
-  "patientId" : "p4",
+  "departmentId" : "4",
+  "patientId" : "4",
   "admissionDate" : [ 2026, 11, 23 ],
   "status" : "COMPLETED",
   "medicalStaff" : [ ]
 }, {
   "id" : "5",
-  "departmentId" : "d1",
-  "patientId" : "p5",
+  "departmentId" : "1",
+  "patientId" : "5",
   "admissionDate" : [ 2026, 11, 24 ],
   "status" : "ACTIVE",
   "medicalStaff" : [ ]
 }, {
   "id" : "6",
-  "departmentId" : "d2",
-  "patientId" : "p6",
+  "departmentId" : "2",
+  "patientId" : "6",
   "admissionDate" : [ 2026, 11, 25 ],
   "status" : "COMPLETED",
   "medicalStaff" : [ ]
 }, {
   "id" : "7",
-  "departmentId" : "d3",
-  "patientId" : "p7",
+  "departmentId" : "3",
+  "patientId" : "7",
   "admissionDate" : [ 2026, 11, 26 ],
   "status" : "ACTIVE",
   "medicalStaff" : [ ]
 }, {
   "id" : "8",
-  "departmentId" : "d4",
-  "patientId" : "p8",
+  "departmentId" : "4",
+  "patientId" : "8",
   "admissionDate" : [ 2026, 11, 27 ],
   "status" : "ACTIVE",
   "medicalStaff" : [ ]
 }, {
   "id" : "9",
-  "departmentId" : "d1",
-  "patientId" : "p9",
+  "departmentId" : "1",
+  "patientId" : "9",
   "admissionDate" : [ 2026, 11, 28 ],
   "status" : "ACTIVE",
   "medicalStaff" : [ ]
 }, {
   "id" : "10",
-  "departmentId" : "d2",
-  "patientId" : "p10",
+  "departmentId" : "2",
+  "patientId" : "10",
   "admissionDate" : [ 2026, 11, 29 ],
   "status" : "COMPLETED",
   "medicalStaff" : [ ]
 }, {
-  "id" : "12",
-  "departmentId" : "d4",
-  "patientId" : "p2",
-  "admissionDate" : [ 2027, 6, 26 ],
-  "status" : "ACTIVE",
+  "id" : "11",
+  "departmentId" : "3",
+  "patientId" : "4",
+  "admissionDate" : [ 2026, 11, 19 ],
+  "status" : "COMPLETED",
   "medicalStaff" : [ ]
 } ]

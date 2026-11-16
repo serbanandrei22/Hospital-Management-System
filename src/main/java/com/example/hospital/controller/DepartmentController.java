@@ -23,9 +23,15 @@ public class DepartmentController {
         return "department/form";
     }
     @PostMapping
-    public String createDepartment(@ModelAttribute Department department){
-        departmentService.saveDepartment(department);
-        return "redirect:/department";
+    public String createDepartment(@ModelAttribute Department department, Model model) {
+        try {
+            departmentService.saveDepartment(department);
+            return "redirect:/department";
+        } catch (IllegalArgumentException e) {
+            model.addAttribute("errorMessage", e.getMessage());
+            model.addAttribute("department", department);
+            return "department/form";
+        }
     }
     @GetMapping("/{id}")
     public String showDepartmentDetails(@PathVariable String id, Model model) {

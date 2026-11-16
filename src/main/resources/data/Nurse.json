@@ -1,12 +1,12 @@
 [
-  {"id":"n1","name":"Ioana Muresan","departmentId":"d1","qualificationLevel":"REGISTERED_NURSE"},
-  {"id":"n2","name":"Maria Pop","departmentId":"d2","qualificationLevel":"PRACTICAL_NURSE"},
-  {"id":"n3","name":"Elena Vasile","departmentId":"d3","qualificationLevel":"REGISTERED_NURSE"},
-  {"id":"n4","name":"Ana Radu","departmentId":"d1","qualificationLevel":"PRACTICAL_NURSE"},
-  {"id":"n5","name":"Carmen Dumitru","departmentId":"d4","qualificationLevel":"REGISTERED_NURSE"},
-  {"id":"n6","name":"Dana Stoica","departmentId":"d2","qualificationLevel":"PRACTICAL_NURSE"},
-  {"id":"n7","name":"Simona Cristea","departmentId":"d5","qualificationLevel":"REGISTERED_NURSE"},
-  {"id":"n8","name":"Raluca Muntean","departmentId":"d3","qualificationLevel":"PRACTICAL_NURSE"},
-  {"id":"n9","name":"Alina Ionescu","departmentId":"d4","qualificationLevel":"REGISTERED_NURSE"},
-  {"id":"n10","name":"Bianca Lungu","departmentId":"d5","qualificationLevel":"PRACTICAL_NURSE"}
+  {"id":"1","name":"Ioana Muresan","departmentId":"1","qualificationLevel":"REGISTERED_NURSE"},
+  {"id":"2","name":"Maria Pop","departmentId":"2","qualificationLevel":"PRACTICAL_NURSE"},
+  {"id":"3","name":"Elena Vasile","departmentId":"3","qualificationLevel":"REGISTERED_NURSE"},
+  {"id":"4","name":"Ana Radu","departmentId":"1","qualificationLevel":"PRACTICAL_NURSE"},
+  {"id":"5","name":"Carmen Dumitru","departmentId":"4","qualificationLevel":"REGISTERED_NURSE"},
+  {"id":"6","name":"Dana Stoica","departmentId":"2","qualificationLevel":"PRACTICAL_NURSE"},
+  {"id":"7","name":"Simona Cristea","departmentId":"5","qualificationLevel":"REGISTERED_NURSE"},
+  {"id":"8","name":"Raluca Muntean","departmentId":"3","qualificationLevel":"PRACTICAL_NURSE"},
+  {"id":"9","name":"Alina Ionescu","departmentId":"4","qualificationLevel":"REGISTERED_NURSE"},
+  {"id":"10","name":"Bianca Lungu","departmentId":"5","qualificationLevel":"PRACTICAL_NURSE"}
 ]

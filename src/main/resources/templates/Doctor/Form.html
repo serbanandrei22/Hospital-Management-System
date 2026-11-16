@@ -5,6 +5,7 @@
 </head>
 <body>
 <h1>Add/Edit Doctor</h1>
+<div th:if="${errorMessage}" th:text="${errorMessage}" style="color: red; font-weight: bold; margin-bottom: 15px;"></div>
 <form th:action="@{/doctor}" th:object="${doctor}" method="post">
     <label>Doctor ID:</label>
     <input type="text" th:field="*{id}" placeholder="Leave blank for auto-generation"/><br><br>

@@ -26,9 +26,15 @@ public class RoomController {
     }
 
     @PostMapping
-    public String createRoom(@ModelAttribute Room room) {
-        roomService.saveRoom(room);
-        return "redirect:/room";
+    public String createRoom(@ModelAttribute Room room, Model model) {
+        try {
+            roomService.saveRoom(room);
+            return "redirect:/room";
+        } catch (IllegalArgumentException e) {
+            model.addAttribute("errorMessage", e.getMessage());
+            model.addAttribute("room", room);
+            return "room/form";
+        }
     }
 
 

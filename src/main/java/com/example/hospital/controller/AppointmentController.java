@@ -25,9 +25,16 @@ public class AppointmentController {
         return "appointment/form";
     }
     @PostMapping
-    public String createAppointment(@ModelAttribute Appointment appointment){
-        appointmentService.saveAppointment(appointment);
-        return "redirect:/appointment";
+    public String createAppointment(@ModelAttribute Appointment appointment, Model model){
+        try {
+            appointmentService.saveAppointment(appointment);
+            return "redirect:/appointment";
+        } catch (IllegalArgumentException e) {
+            model.addAttribute("errorMessage", e.getMessage());
+            model.addAttribute("appointment", appointment);
+            model.addAttribute("statuses", Appointment.AppointmentStatus.values());
+            return "appointment/form";
+        }
     }
     @GetMapping("/{id}")
     public String showAppointmentDetails(@PathVariable String id, Model model) {

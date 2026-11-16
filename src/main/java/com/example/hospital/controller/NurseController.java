@@ -24,9 +24,15 @@ public class NurseController {
         return "nurse/form";
     }
     @PostMapping
-    public String createNurse(@ModelAttribute Nurse nurse){
-        nurseService.saveNurse(nurse);
-        return "redirect:/nurse";
+    public String createNurse(@ModelAttribute Nurse nurse, Model model) {
+        try {
+            nurseService.saveNurse(nurse);
+            return "redirect:/nurse";
+        } catch (IllegalArgumentException e) {
+            model.addAttribute("errorMessage", e.getMessage());
+            model.addAttribute("nurse", nurse);
+            return "nurse/form";
+        }
     }
     @PostMapping("/{id}/delete")
     public String deleteNurse(@PathVariable String id){
