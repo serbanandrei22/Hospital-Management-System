@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Adauga Programare</title></head>
+<head>
+    <title>Add Appointment</title>
+</head>
 <body>
-<h1>Adauga o programare noua</h1>
+<h1>Add a New Appointment</h1>
 <form th:action="@{/appointment}" th:object="${appointment}" method="post">
 
-    <label>ID Programare:</label>
-    <input type="text" th:field="*{id}" required/><br><br>
+    <label>Appointment ID:</label>
+    <input type="text" th:field="*{id}" placeholder="Leave blank for auto-generation"/><br><br>
 
-    <label>ID Pacient:</label>
+    <label>Patient ID:</label>
     <input type="text" th:field="*{patientId}" required/><br><br>
 
-    <label>ID Departament:</label>
+    <label>Department ID:</label>
     <input type="text" th:field="*{departmentId}"/><br><br>
 
-    <label>Data Admiterii:</label>
+    <label>Admission Date:</label>
     <input type="date" th:field="*{admissionDate}"/><br><br>
 
     <label>Status:</label>
@@ -22,8 +24,8 @@
         <option th:each="s : ${statuses}" th:value="${s}" th:text="${s}"></option>
     </select><br><br>
 
-    <button type="submit">Salveaza</button>
+    <button type="submit">Save</button>
 </form>
-<br><a th:href="@{/appointment}">Inapoi la lista</a>
+<br><a th:href="@{/appointment}">Back to list</a>
 </body>
 </html>

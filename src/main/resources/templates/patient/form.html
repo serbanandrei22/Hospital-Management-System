@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Adauga Pacient</title>
+    <title>Add Patient</title>
 </head>
 <body>
-<h1>Adauga un pacient nou</h1>
+<h1>Add a New Patient</h1>
 
 <form th:action="@{/patient}" th:object="${patient}" method="post">
 
-    <label>ID Pacient:</label>
-    <input type="text" th:field="*{id}" required/><br><br>
+    <label>Patient ID:</label>
+    <input type="text" th:field="*{id}" placeholder="Leave blank for auto-generation"/><br><br>
 
-    <label>Nume Pacient:</label>
+    <label>Patient Name:</label>
     <input type="text" th:field="*{name}" required/><br><br>
 
     <label>Email:</label>
     <input type="email" th:field="*{email}"/><br><br>
 
-    <label>Telefon:</label>
+    <label>Phone Number:</label>
     <input type="text" th:field="*{phoneNumber}"/><br><br>
 
-    <label>ID-uri Programari (separate prin virgula):</label>
-    <input type="text" th:field="*{appointments}" placeholder="ex: prog1, prog2"/><br><br>
+    <label>Appointment IDs (comma-separated):</label>
+    <input type="text" th:field="*{appointments}" placeholder="e.g. app1, app2"/><br><br>
 
-    <button type="submit">Salveaza</button>
+    <button type="submit">Save</button>
 </form>
 
 <br>
-<a th:href="@{/patient}">Inapoi la lista</a>
+<a th:href="@{/patient}">Back to list</a>
 </body>
 </html>

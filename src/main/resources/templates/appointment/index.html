@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymleaf.org">
-<head><title>Lista Programari</title></head>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Appointments List</title>
+</head>
 <body>
-    <h1>Toate Programarile</h1>
-    <a th:href="@{appointment/new}">Adauga o programare noua</a>
-    <br><br>
-    <table border="1">
-        <thead>
-        <tr>
-            <th>ID Programare</th>
-            <th>ID Pacient</th>
-            <th>ID Department</th>
-            <Th>Data Admiteri</Th>
-            <Th>Status</Th>
-            <th>Actiuni</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="a : ${appointments}">
-            <td th:text="${a.id}"></td>
-            <td th:text="${a.patientId}"></td>
-            <td th:text="${a.departmentId}"></td>
-            <td th:text="${a.admissionDate}"></td>
-            <td th:text="${a.status}"></td>
-            <td>
-                <form th:action="@{'/appointment/' + ${a.id} + '/delete'}" method="post" style="display:inline;">
-                    <button type="submit">Delete</button>
-                </form>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+<h1>All Appointments</h1>
+<a th:href="@{appointment/new}">Add a New Appointment</a>
+<br><br>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Appointment ID</th>
+        <th>Patient ID</th>
+        <th>Department ID</th>
+        <th>Admission Date</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="a : ${appointments}">
+        <td th:text="${a.id}"></td>
+        <td th:text="${a.patientId}"></td>
+        <td th:text="${a.departmentId}"></td>
+        <td th:text="${a.admissionDate}"></td>
+        <td th:text="${a.status}"></td>
+        <td>
+            <form th:action="@{'/appointment/' + ${a.id} + '/delete'}" method="post" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

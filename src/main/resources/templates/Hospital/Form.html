@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Adauga Spital</title></head>
+<head>
+    <title>Add Hospital</title>
+</head>
 <body>
-<h1>Adauga un spital nou</h1>
+<h1>Add a New Hospital</h1>
 <form th:action="@{/hospital}" th:object="${hospital}" method="post">
-    <label>ID Spital:</label>
-    <input type="text" th:field="*{id}" required/><br><br>
+    <label>Hospital ID:</label>
+    <input type="text" th:field="*{id}" placeholder="Leave blank for auto-generation"/><br><br>
 
-    <label>Nume Spital:</label>
+    <label>Hospital Name:</label>
     <input type="text" th:field="*{name}" required/><br><br>
 
-    <label>Oras:</label>
+    <label>City:</label>
     <input type="text" th:field="*{city}"/><br><br>
 
-    <label>Linie Urgenta (Emergency Hotline):</label>
+    <label>Emergency Hotline:</label>
     <input type="text" th:field="*{emergencyHotline}"/><br><br>
 
-    <button type="submit">Salveaza</button>
+    <button type="submit">Save</button>
 </form>
-<br><a th:href="@{/hospital}">Inapoi la lista</a>
+<br><a th:href="@{/hospital}">Back to list</a>
 </body>
 </html>

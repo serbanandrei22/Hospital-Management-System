@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Adauga Departament</title></head>
+<head>
+    <title>Add Department</title>
+</head>
 <body>
-<h1>Adauga un departament nou</h1>
+<h1>Add a New Department</h1>
 <form th:action="@{/department}" th:object="${department}" method="post">
 
-    <label>ID Departament:</label>
-    <input type="text" th:field="*{id}" required/><br><br>
+    <label>Department ID:</label>
+    <input type="text" th:field="*{id}" placeholder="Leave blank for auto-generation"/><br><br>
 
-    <label>Nume Departament:</label>
+    <label>Department Name:</label>
     <input type="text" th:field="*{name}" required/><br><br>
 
-    <label>ID Spital:</label>
+    <label>Hospital ID:</label>
     <input type="text" th:field="*{hospitalId}"/><br><br>
 
-    <button type="submit">Salveaza</button>
+    <button type="submit">Save</button>
 </form>
-<br><a th:href="@{/department}">Inapoi la lista</a>
+<br><a th:href="@{/department}">Back to list</a>
 </body>
 </html>

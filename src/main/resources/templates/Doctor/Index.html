@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Lista Doctori</title></head>
+<head>
+    <title>Doctors List</title>
+</head>
 <body>
-<h1>Toti Doctorii</h1>
-<a th:href="@{/doctor/new}">Adauga un doctor nou</a>
+<h1>All Doctors</h1>
+<a th:href="@{/doctor/new}">Add a New Doctor</a>
 <br><br>
 <table border="1">
     <thead>
     <tr>
-        <th>ID Doctor</th>
-        <th>Nume Doctor</th>
-        <th>ID Departament</th>
-        <th>Număr Licenta</th>
-        <th>Actiuni</th>
+        <th>Doctor ID</th>
+        <th>Doctor Name</th>
+        <th>Department ID</th>
+        <th>License Number</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>

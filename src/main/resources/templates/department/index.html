@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head><title>Lista Departamente</title></head>
+<head>
+    <title>Departments List</title>
+</head>
 <body>
-<h1>Toate Departamentele</h1>
-<a th:href="@{/department/new}">Adauga un departament nou</a>
+<h1>All Departments</h1>
+<a th:href="@{/department/new}">Add a New Department</a>
 <br><br>
 <table border="1">
     <thead>
     <tr>
-        <th>ID Departament</th>
-        <th>Nume</th>
-        <th>ID Spital</th>
-        <th>Actiuni</th>
+        <th>Department ID</th>
+        <th>Name</th>
+        <th>Hospital ID</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>
