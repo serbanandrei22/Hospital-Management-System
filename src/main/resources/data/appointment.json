@@ -1,0 +1,12 @@
+[
+  { "id": "1", "patientId": "p1", "departmentId": "d1", "admissionDate": "2026-11-20", "status": "COMPLETED" },
+  { "id": "2", "patientId": "p2", "departmentId": "d2", "admissionDate": "2026-11-21", "status": "ACTIVE" },
+  { "id": "3", "patientId": "p3", "departmentId": "d3", "admissionDate": "2026-11-22", "status": "COMPLETED" },
+  { "id": "4", "patientId": "p4", "departmentId": "d4", "admissionDate": "2026-11-23", "status": "COMPLETED" },
+  { "id": "5", "patientId": "p5", "departmentId": "d1", "admissionDate": "2026-11-24", "status": "ACTIVE" },
+  { "id": "6", "patientId": "p6", "departmentId": "d2", "admissionDate": "2026-11-25", "status": "COMPLETED" },
+  { "id": "7", "patientId": "p7", "departmentId": "d3", "admissionDate": "2026-11-26", "status": "ACTIVE" },
+  { "id": "8", "patientId": "p8", "departmentId": "d4", "admissionDate": "2026-11-27", "status": "ACTIVE" },
+  { "id": "9", "patientId": "p9", "departmentId": "d1", "admissionDate": "2026-11-28", "status": "ACTIVE" },
+  { "id": "10", "patientId": "p10", "departmentId": "d2", "admissionDate": "2026-11-29", "status": "COMPLETED" }
+]
