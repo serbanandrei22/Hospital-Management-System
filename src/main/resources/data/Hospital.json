@@ -1,0 +1,12 @@
+[
+  {"id":"1","name":"Spitalul Judetean Cluj","city":"Cluj-Napoca","emergencyHotline":"0264-111222","departments":["d1","d2"],"rooms":["r1","r2"]},
+  {"id":"2","name":"Spitalul Municipal","city":"Bucuresti","emergencyHotline":"021-333444","departments":["d3"],"rooms":["r3"]},
+  {"id":"3","name":"Spitalul de Urgenta","city":"Timisoara","emergencyHotline":"0256-555666","departments":["d4"],"rooms":["r4"]},
+  {"id":"4","name":"Spitalul Clinic","city":"Iasi","emergencyHotline":"0232-777888","departments":["d5"],"rooms":["r5"]},
+  {"id":"5","name":"Spitalul Militar","city":"Brasov","emergencyHotline":"0268-999000","departments":["d6"],"rooms":["r6"]},
+  {"id":"6","name":"Spitalul de Pediatrie","city":"Cluj-Napoca","emergencyHotline":"0264-123456","departments":["d7"],"rooms":["r7"]},
+  {"id":"7","name":"Spitalul CFR","city":"Craiova","emergencyHotline":"0251-654321","departments":["d8"],"rooms":["r8"]},
+  {"id":"8","name":"Spitalul TBC","city":"Constanta","emergencyHotline":"0241-112233","departments":["d9"],"rooms":["r9"]},
+  {"id":"9","name":"Spitalul Nou","city":"Sibiu","emergencyHotline":"0269-445566","departments":["d10"],"rooms":["r10"]},
+  {"id":"10","name":"Spitalul Central","city":"Oradea","emergencyHotline":"0259-778899","departments":["d11"],"rooms":["r11"]}
+]
