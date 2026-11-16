@@ -58,4 +58,10 @@
   "appointments" : [ "13" ],
   "email" : "andreea.matei@email.com",
   "phoneNumber" : "0724444444"
+}, {
+  "id" : "11",
+  "name" : "Cristian",
+  "appointments" : [ "1", "2" ],
+  "email" : "sdada@gmail.com",
+  "phoneNumber" : "3891203192"
 } ]
