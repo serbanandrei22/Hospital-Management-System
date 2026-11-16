@@ -5,5 +5,9 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public class PatientRepository extends InMemoryRepository<Patient> {
+public class PatientRepository extends InFileRepository<Patient> {
+
+    public PatientRepository() {
+        super("src/main/resources/data/Patient.json", Patient.class);
+    }
 }
