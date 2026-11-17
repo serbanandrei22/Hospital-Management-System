@@ -17,51 +17,45 @@
   "email" : "gabriel.ionescu@email.com",
   "phoneNumber" : "0723333333"
 }, {
-  "id" : "5",
+  "id" : "4",
   "name" : "Vlad Petrescu",
   "appointments" : [ "5" ],
   "email" : "vlad.petrescu@email.com",
   "phoneNumber" : "0725555555"
 }, {
-  "id" : "6",
+  "id" : "5",
   "name" : "Sorin Popa",
   "appointments" : [ ],
   "email" : "sorin.popa@email.com",
   "phoneNumber" : "0726666666"
 }, {
-  "id" : "7",
+  "id" : "6",
   "name" : "Mihaela Dinu",
   "appointments" : [ "6" ],
   "email" : "mihaela.dinu@email.com",
   "phoneNumber" : "0727777777"
 }, {
-  "id" : "8",
+  "id" : "7",
   "name" : "Florin Enache",
   "appointments" : [ ],
   "email" : "florin.enache@email.com",
   "phoneNumber" : "0728888888"
 }, {
-  "id" : "9",
+  "id" : "8",
   "name" : "Cristina Albu",
   "appointments" : [ "7" ],
   "email" : "cristina.albu@email.com",
   "phoneNumber" : "0729999999"
 }, {
-  "id" : "10",
+  "id" : "9",
   "name" : "Bogdan Georgescu",
   "appointments" : [ ],
   "email" : "bogdan.g@email.com",
   "phoneNumber" : "0730000000"
 }, {
-  "id" : "4",
+  "id" : "10",
   "name" : "Andreea Matei",
   "appointments" : [ "13" ],
   "email" : "andreea.matei@email.com",
   "phoneNumber" : "0724444444"
-}, {
-  "id" : "11",
-  "name" : "Cristian",
-  "appointments" : [ "1", "2" ],
-  "email" : "sdada@gmail.com",
-  "phoneNumber" : "3891203192"
 } ]

@@ -1,12 +1,61 @@
-[
-  { "id": "1", "name": "Dr. Palage Corina", "departmentId": "1", "licenseNumber": "LIC12345" },
-  { "id": "2", "name": "Dr. Ionescu Maria", "departmentId": "1", "licenseNumber": "LIC12346" },
-  { "id": "3", "name": "Dr. Georgescu Radu", "departmentId": "2", "licenseNumber": "LIC12347" },
-  { "id": "4", "name": "Dr. Vasilescu Ana", "departmentId": "3", "licenseNumber": "LIC12348" },
-  { "id": "5", "name": "Dr. Dumitrescu Dan", "departmentId": "4", "licenseNumber": "LIC12349" },
-  { "id": "6", "name": "Dr. Stan Elena", "departmentId": "5", "licenseNumber": "LIC12350" },
-  { "id": "7", "name": "Dr. Stoica Mihai", "departmentId": "6", "licenseNumber": "LIC12351" },
-  { "id": "8", "name": "Dr. Moldovan Ioana", "departmentId": "7", "licenseNumber": "LIC12352" },
-  { "id": "9", "name": "Dr. Petrescu Gabriel", "departmentId": "8", "licenseNumber": "LIC12353" },
-  { "id": "10", "name": "Dr. Rusu Cristina", "departmentId": "9", "licenseNumber": "LIC12354" }
-]
+[ {
+  "id" : "1",
+  "name" : "Dr. Palage Corina",
+  "appointments" : [ ],
+  "departmentId" : "1",
+  "licenseNumber" : "LIC12345"
+}, {
+  "id" : "2",
+  "name" : "Dr. Ionescu Maria",
+  "appointments" : [ ],
+  "departmentId" : "1",
+  "licenseNumber" : "LIC12346"
+}, {
+  "id" : "3",
+  "name" : "Dr. Georgescu Radu",
+  "appointments" : [ ],
+  "departmentId" : "2",
+  "licenseNumber" : "LIC12347"
+}, {
+  "id" : "4",
+  "name" : "Dr. Vasilescu Ana",
+  "appointments" : [ ],
+  "departmentId" : "3",
+  "licenseNumber" : "LIC12348"
+}, {
+  "id" : "5",
+  "name" : "Dr. Dumitrescu Dan",
+  "appointments" : [ ],
+  "departmentId" : "4",
+  "licenseNumber" : "LIC12349"
+}, {
+  "id" : "6",
+  "name" : "Dr. Stan Elena",
+  "appointments" : [ ],
+  "departmentId" : "5",
+  "licenseNumber" : "LIC12350"
+}, {
+  "id" : "7",
+  "name" : "Dr. Stoica Mihai",
+  "appointments" : [ ],
+  "departmentId" : "6",
+  "licenseNumber" : "LIC12351"
+}, {
+  "id" : "8",
+  "name" : "Dr. Moldovan Ioana",
+  "appointments" : [ ],
+  "departmentId" : "7",
+  "licenseNumber" : "LIC12352"
+}, {
+  "id" : "9",
+  "name" : "Dr. Petrescu Gabriel",
+  "appointments" : [ ],
+  "departmentId" : "8",
+  "licenseNumber" : "LIC12353"
+}, {
+  "id" : "10",
+  "name" : "Dr. Rusu Cristina",
+  "appointments" : [ ],
+  "departmentId" : "9",
+  "licenseNumber" : "LIC12354"
+} ]

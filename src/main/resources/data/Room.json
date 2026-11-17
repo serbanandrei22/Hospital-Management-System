@@ -1,12 +1,81 @@
-[
-  {"id":"1","hospitalId":"1","capacity":2.0,"number":"101","status":"AVAILABLE","floorNumber":1,"appointments":[]},
-  {"id":"2","hospitalId":"1","capacity":3.0,"number":"102","status":"OCCUPIED","floorNumber":1,"appointments":["1"]},
-  {"id":"3","hospitalId":"2","capacity":1.0,"number":"201","status":"AVAILABLE","floorNumber":2,"appointments":[]},
-  {"id":"4","hospitalId":"2","capacity":2.0,"number":"202","status":"AVAILABLE","floorNumber":2,"appointments":[]},
-  {"id":"5","hospitalId":"3","capacity":4.0,"number":"301","status":"OCCUPIED","floorNumber":3,"appointments":["2","3"]},
-  {"id":"6","hospitalId":"3","capacity":2.0,"number":"302","status":"AVAILABLE","floorNumber":3,"appointments":[]},
-  {"id":"7","hospitalId":"4","capacity":3.0,"number":"401","status":"AVAILABLE","floorNumber":4,"appointments":[]},
-  {"id":"8","hospitalId":"5","capacity":1.0,"number":"501","status":"OCCUPIED","floorNumber":5,"appointments":["4"]},
-  {"id":"9","hospitalId":"5","capacity":2.0,"number":"502","status":"AVAILABLE","floorNumber":5,"appointments":[]},
-  {"id":"10","hospitalId":"6","capacity":2.0,"number":"601","status":"AVAILABLE","floorNumber":6,"appointments":[]}
-]
+[ {
+  "id" : "1",
+  "hospitalId" : "1",
+  "capacity" : 2.0,
+  "number" : "101",
+  "status" : "AVAILABLE",
+  "appointments" : [ ],
+  "floorNumber" : 1
+}, {
+  "id" : "2",
+  "hospitalId" : "1",
+  "capacity" : 3.0,
+  "number" : "102",
+  "status" : "OCCUPIED",
+  "appointments" : [ "1" ],
+  "floorNumber" : 1
+}, {
+  "id" : "3",
+  "hospitalId" : "2",
+  "capacity" : 1.0,
+  "number" : "201",
+  "status" : "AVAILABLE",
+  "appointments" : [ ],
+  "floorNumber" : 2
+}, {
+  "id" : "4",
+  "hospitalId" : "2",
+  "capacity" : 2.0,
+  "number" : "202",
+  "status" : "AVAILABLE",
+  "appointments" : [ ],
+  "floorNumber" : 2
+}, {
+  "id" : "5",
+  "hospitalId" : "3",
+  "capacity" : 4.0,
+  "number" : "301",
+  "status" : "OCCUPIED",
+  "appointments" : [ "2", "3" ],
+  "floorNumber" : 3
+}, {
+  "id" : "6",
+  "hospitalId" : "3",
+  "capacity" : 2.0,
+  "number" : "302",
+  "status" : "AVAILABLE",
+  "appointments" : [ ],
+  "floorNumber" : 3
+}, {
+  "id" : "7",
+  "hospitalId" : "4",
+  "capacity" : 3.0,
+  "number" : "401",
+  "status" : "AVAILABLE",
+  "appointments" : [ ],
+  "floorNumber" : 4
+}, {
+  "id" : "8",
+  "hospitalId" : "5",
+  "capacity" : 1.0,
+  "number" : "501",
+  "status" : "OCCUPIED",
+  "appointments" : [ "4" ],
+  "floorNumber" : 5
+}, {
+  "id" : "9",
+  "hospitalId" : "5",
+  "capacity" : 2.0,
+  "number" : "502",
+  "status" : "AVAILABLE",
+  "appointments" : [ ],
+  "floorNumber" : 5
+}, {
+  "id" : "10",
+  "hospitalId" : "6",
+  "capacity" : 2.0,
+  "number" : "601",
+  "status" : "AVAILABLE",
+  "appointments" : [ ],
+  "floorNumber" : 6
+} ]

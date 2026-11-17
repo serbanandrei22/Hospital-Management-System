@@ -25,7 +25,7 @@
         <td th:text="${h.emergencyHotline}"></td>
         <td>
             <a th:href="@{/hospital/{id}(id=${h.id})}">Details</a> |
-            <a th:href="@{/hosptial/{id}/edit(id=${h.id})}">Edit</a> |
+            <a th:href="@{/hospital/{id}/edit(id=${h.id})}">Edit</a> |
             <form th:action="@{'/hospital/' + ${h.id} + '/delete'}" method="post" style="display:inline;">
                 <button type="submit">Delete</button>
             </form>

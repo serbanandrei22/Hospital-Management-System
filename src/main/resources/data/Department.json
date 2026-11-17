@@ -1,12 +1,41 @@
-[
-  { "id": "1", "name": "Cardiologie", "hospitalId": "1" },
-  { "id": "2", "name": "Neurologie", "hospitalId": "1" },
-  { "id": "3", "name": "Pediatrie", "hospitalId": "2" },
-  { "id": "4", "name": "Ortopedie", "hospitalId": "2" },
-  { "id": "5", "name": "Chirurgie", "hospitalId": "3" },
-  { "id": "6", "name": "Oftalmologie", "hospitalId": "3" },
-  { "id": "7", "name": "Dermatologie", "hospitalId": "4" },
-  { "id": "8", "name": "Psihiatrie", "hospitalId": "4" },
-  { "id": "9", "name": "ORL", "hospitalId": "5" },
-  { "id": "10", "name": "Oncologie", "hospitalId": "5" }
-]
+[ {
+  "id" : "1",
+  "name" : "Cardiologie",
+  "hospitalId" : "1"
+}, {
+  "id" : "2",
+  "name" : "Neurologie",
+  "hospitalId" : "1"
+}, {
+  "id" : "3",
+  "name" : "Pediatrie",
+  "hospitalId" : "2"
+}, {
+  "id" : "4",
+  "name" : "Ortopedie",
+  "hospitalId" : "2"
+}, {
+  "id" : "5",
+  "name" : "Chirurgie",
+  "hospitalId" : "3"
+}, {
+  "id" : "6",
+  "name" : "Oftalmologie",
+  "hospitalId" : "3"
+}, {
+  "id" : "7",
+  "name" : "Dermatologie",
+  "hospitalId" : "4"
+}, {
+  "id" : "8",
+  "name" : "Psihiatrie",
+  "hospitalId" : "4"
+}, {
+  "id" : "9",
+  "name" : "ORL",
+  "hospitalId" : "5"
+}, {
+  "id" : "10",
+  "name" : "Oncologie",
+  "hospitalId" : "5"
+} ]

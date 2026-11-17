@@ -70,9 +70,9 @@
   "medicalStaff" : [ ]
 }, {
   "id" : "11",
-  "departmentId" : "3",
+  "departmentId" : "2",
   "patientId" : "4",
-  "admissionDate" : [ 2026, 11, 19 ],
-  "status" : "COMPLETED",
+  "admissionDate" : [ 2026, 11, 27 ],
+  "status" : "ACTIVE",
   "medicalStaff" : [ ]
 } ]

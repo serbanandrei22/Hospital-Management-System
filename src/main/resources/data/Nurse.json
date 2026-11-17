@@ -1,12 +1,61 @@
-[
-  {"id":"1","name":"Ioana Muresan","departmentId":"1","qualificationLevel":"REGISTERED_NURSE"},
-  {"id":"2","name":"Maria Pop","departmentId":"2","qualificationLevel":"PRACTICAL_NURSE"},
-  {"id":"3","name":"Elena Vasile","departmentId":"3","qualificationLevel":"REGISTERED_NURSE"},
-  {"id":"4","name":"Ana Radu","departmentId":"1","qualificationLevel":"PRACTICAL_NURSE"},
-  {"id":"5","name":"Carmen Dumitru","departmentId":"4","qualificationLevel":"REGISTERED_NURSE"},
-  {"id":"6","name":"Dana Stoica","departmentId":"2","qualificationLevel":"PRACTICAL_NURSE"},
-  {"id":"7","name":"Simona Cristea","departmentId":"5","qualificationLevel":"REGISTERED_NURSE"},
-  {"id":"8","name":"Raluca Muntean","departmentId":"3","qualificationLevel":"PRACTICAL_NURSE"},
-  {"id":"9","name":"Alina Ionescu","departmentId":"4","qualificationLevel":"REGISTERED_NURSE"},
-  {"id":"10","name":"Bianca Lungu","departmentId":"5","qualificationLevel":"PRACTICAL_NURSE"}
-]
+[ {
+  "id" : "1",
+  "name" : "Ioana Muresan",
+  "appointments" : [ ],
+  "departmentId" : "1",
+  "qualificationLevel" : "REGISTERED_NURSE"
+}, {
+  "id" : "2",
+  "name" : "Maria Pop",
+  "appointments" : [ ],
+  "departmentId" : "2",
+  "qualificationLevel" : "PRACTICAL_NURSE"
+}, {
+  "id" : "3",
+  "name" : "Elena Vasile",
+  "appointments" : [ ],
+  "departmentId" : "3",
+  "qualificationLevel" : "REGISTERED_NURSE"
+}, {
+  "id" : "4",
+  "name" : "Ana Radu",
+  "appointments" : [ ],
+  "departmentId" : "1",
+  "qualificationLevel" : "PRACTICAL_NURSE"
+}, {
+  "id" : "5",
+  "name" : "Carmen Dumitru",
+  "appointments" : [ ],
+  "departmentId" : "4",
+  "qualificationLevel" : "REGISTERED_NURSE"
+}, {
+  "id" : "6",
+  "name" : "Dana Stoica",
+  "appointments" : [ ],
+  "departmentId" : "2",
+  "qualificationLevel" : "PRACTICAL_NURSE"
+}, {
+  "id" : "7",
+  "name" : "Simona Cristea",
+  "appointments" : [ ],
+  "departmentId" : "5",
+  "qualificationLevel" : "REGISTERED_NURSE"
+}, {
+  "id" : "8",
+  "name" : "Raluca Muntean",
+  "appointments" : [ ],
+  "departmentId" : "3",
+  "qualificationLevel" : "PRACTICAL_NURSE"
+}, {
+  "id" : "9",
+  "name" : "Alina Ionescu",
+  "appointments" : [ ],
+  "departmentId" : "4",
+  "qualificationLevel" : "REGISTERED_NURSE"
+}, {
+  "id" : "10",
+  "name" : "Bianca Lungu",
+  "appointments" : [ ],
+  "departmentId" : "5",
+  "qualificationLevel" : "PRACTICAL_NURSE"
+} ]
